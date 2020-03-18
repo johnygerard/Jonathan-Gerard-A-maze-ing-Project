@@ -67,7 +67,7 @@ class MyRobotController : public Process, public AgentInterface {
     void stop() {}
 
     double v, omega;
-    double const v_m = 20, omega_m = 0.5;
+    double const v_m = 25, omega_m = 0.5;
     bool firing;
     
 

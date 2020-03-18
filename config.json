@@ -23,10 +23,37 @@
 
         {
             "definition": "defs/monster.json",
-            "style": { "fill": "lightgreen", "stroke": "black" },
+            "style": { "fill": "green", "stroke": "black" },
             "position": {
                 "x": 20, 
                 "y": 20, 
+                "theta": 0
+            }
+        },
+        {
+            "definition": "defs/monster2.json",
+            "style": { "fill": "lightgreen", "stroke": "black" },
+            "position": {
+                "x": 0, 
+                "y": -170, 
+                "theta": 0
+            }
+        },
+        {
+            "definition": "defs/monster3.json",
+            "style": { "fill": "lightgreen", "stroke": "black" },
+            "position": {
+                "x": -300, 
+                "y": -100, 
+                "theta": 0
+            }
+        },
+        {
+            "definition": "defs/monster4.json",
+            "style": { "fill": "lightgreen", "stroke": "black" },
+            "position": {
+                "x": -200, 
+                "y": -40, 
                 "theta": 0
             }
         }

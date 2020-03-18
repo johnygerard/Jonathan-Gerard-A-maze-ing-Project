@@ -17,7 +17,7 @@ class MonsterController : public Process, public AgentInterface {
     }
     void start() {}
     void update() {
-        label(std::to_string(hp), 0,0);
+        label(std::to_string(hp), -6,0);
 
         if (hp < 0) {
         remove_agent(id());
@@ -25,7 +25,7 @@ class MonsterController : public Process, public AgentInterface {
         notice_collisions_with("Bullet", [&](Event &e) {
             hp--;
         }); 
-        omni_move_toward(vect[idx%2],20, 0.9);
+        omni_move_toward(vect[idx%2],30, 0.9);
 
         if (abs(x()-vect[idx%2]) < 0.05){
 
@@ -37,9 +37,9 @@ class MonsterController : public Process, public AgentInterface {
     
     void stop() {}
     private:
-    int hp = 5;
+    int hp = 10;
     int idx = 0;
-    std::vector<double> vect= {-40,40};
+    std::vector<double> vect= {-40,60};
 
 };
 

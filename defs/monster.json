@@ -3,7 +3,7 @@
   "type": "dynamic",
   "description": "Replace this string with a description",
   "shape": "omni",
-  "radius": 10,
+  "radius": 12,
   "friction": {
     "collision": 1,
     "linear": 1,
