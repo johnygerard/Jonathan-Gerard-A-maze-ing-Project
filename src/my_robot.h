@@ -2,12 +2,8 @@
 #define __MY_ROBOT_AGENT__H 
 #include "enviro.h"
 #include "styles.h"
-#include <ratio>
-#include <chrono>    
-#include <ctime>
 #include <vector>
-#include <thread>         // std::this_thread::sleep_for
-#include <cstdlib> //_sleep()  --- just a function that waits a certain amount of milliseconds
+
 
 
 typedef std::chrono::high_resolution_clock Clock;
@@ -18,16 +14,18 @@ using namespace std;
 using namespace enviro;
 
 
-
+///////// Class initialzes the robot/player ///////////////
 class MyRobotController : public Process, public AgentInterface {
 
     public:
     MyRobotController() : Process(), AgentInterface(), v(0), omega(0), firing(false) {}
 
     void init() {
+        ///////////// define W, A, S, D for player control //////////////
         watch("keydown", [&](Event &e) {
             auto k = e.value()["key"].get<std::string>();
             if ( k == " " && !firing ) {
+                //////// initialize bullets //////////
                   Agent& bullet = add_agent("Bullet", 
                     x() + 17*cos(angle()), 
                     y() + 17*sin(angle()), 
@@ -44,7 +42,9 @@ class MyRobotController : public Process, public AgentInterface {
             } else if ( k == "d" ) {
                   omega = omega_m;
             } 
-        });        
+        });   
+
+        /////////// when no keys are pressed, each function is reseted back to zero ////////////     
         watch("keyup", [&](Event &e) {
             auto k = e.value()["key"].get<std::string>();
             if ( k == " " ) {
@@ -61,12 +61,14 @@ class MyRobotController : public Process, public AgentInterface {
     }
     void start() { }
     void update() {
+        ////////// velocity and turn angle definition /////////////
         track_velocity(v,omega,10,400);
         
     }
     void stop() {}
 
     double v, omega;
+    ///////// sensitivty to movement /////////////
     double const v_m = 25, omega_m = 0.5;
     bool firing;
     

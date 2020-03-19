@@ -5,6 +5,8 @@
 
 using namespace enviro;
 
+////// This class initalizes the bullet and implements a remove agen that ilimunates the bullet once fired///////
+
 class BulletController : public Process, public AgentInterface {
 
     public:
@@ -15,6 +17,8 @@ class BulletController : public Process, public AgentInterface {
     void start() {}
 
     void update() {
+        
+        //////// counter that removes the bullet once activated by " "////////
         if ( counter++ > 10 ) {
             remove_agent(id());
         }
