@@ -3,11 +3,23 @@ Jonathan-Gerard-A-maze-ing-Project
 
 Overview: 
 ---
-    The goal of this project is to navigate the vehicle through the maze until you reach the red line. In doing so, you will be faced with monsters that get in your way. Try to make it to the end goal without getting hit. Once you get to the red line you are finished! Great job!
+    The goal of this project is to navigate the vehicle through the maze
+     until you reach the red line. In doing so, you will be faced with 
+     monsters that get in your way. Try to make it to the end goal without 
+     getting hit. Once you get to the red line you are finished! Great job!
 
 Key Challenges: 
 ---
-    There were many challenges getting this whole program to work. First challenge was trying to understand Enviro and .json format. I was not prepared as much as I liked going into the final project. I wish we had more time/hw earlier on in the semester utilizing .json and Enviro. Second challenge was developing an understanding of the Enviro architecture. I feel like tons of information was dumped into Klavins Enviro repository and it was difficult understanding how to utilize the provided functions. After figuring out how each function worked, I was limitied on time to develop something more complex. Regardless of the due date. I plan to play around more with Enviro to learn/understand each function.
+    There were many challenges getting this whole program to work. First 
+    challenge was trying to understand Enviro and .json format. I was not 
+    prepared as much as I liked going into the final project. I wish we 
+    had more time/hw earlier on in the semester utilizing .json and Enviro.
+    Second challenge was developing an understanding of the Enviro architecture. 
+    I feel like tons of information was dumped into Klavins Enviro repository and 
+    it was difficult understanding how to utilize the provided functions. After 
+    figuring out how each function worked, I was limitied on time to develop something
+    more complex. Regardless of the due date. I plan to play around more with Enviro 
+    to learn/understand each function.
 
 Install and Simulator Instructions:
 ---
